@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>schoollife</title>
+<link rel="stylesheet" href="ionicons/2.0.1/css/ionicons.min.css">
+<link rel="icon" type="images/x-icon" href="南大logo.png">
+<link href="https://fonts.googleapis.com/css?family=方正字迹-逸龙行楷 简|Play" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family:'微软雅黑';
+    margin: 0;
+}
+/* 导航 */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+/* 导航栏样式 */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+/* 右侧链接*/
+.navbar a.right {
+    float: right;
+}
+
+/* 鼠标移动到链接的颜色 */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* 列容器 */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image: url(images/背景24.png);
+	background-size: cover;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {
+	-ms-flex: 70%; /* IE10 */
+	flex: 70%;
+    background-image: url(主页背景.png);
+	padding: 20px;
+	font-weight: 100;
+}
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 95%;
+    padding: 50px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 120%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+<style type="text/css">
+	.imgBox{
+		border-top: purple;
+		width: 310;
+		height: 210;
+		margin: 0 auto;
+	}
+	.imgBox img{
+		width: 300;
+		height: 200;
+		margin: 0 auto;
+	}
+	.img1{
+		display: block;
+	}
+	.img2{
+		display: none;
+	}
+	.img3{
+		display: none;
+	}
+</style>
+</head>
+<body>
+	<header>
+	<nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+						<li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+						        <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+	<div class="background"></div>
+	<br></br><br></br>
+	<p>
+		<h1 align="center" style="font-family: '微软雅黑'; font-size: 50px;"><b>食在南大</b></h1>
+	    <p align="center"  style="font-family: '微软雅黑'; font-size: 25px;">你是否在好奇我们的一日三餐……</p>
+	    <br>
+		<table align="center">
+			<tr>
+				<td><div class="imgBox">
+					<img class="img-slide img1" src="food1.jpg" width="300" height="200" alt="1"/>
+					<img class="img-slide img2" src="food2.jpg" width="300" height="200" alt="2"/>
+					<img class="img-slide img3" src="food3.jpg" width="300" height="200" alt="3"/>
+					</div>
+				</td>
+				<td><iframe src="schoollife-1.html" width="600" height="200" frameborder="0"></iframe></td>
+			</tr>
+		</table>
+	</p>
+    <br></br><br></br>
+    <p>
+		<h2 align="center" style="font-family: '微软雅黑'; font-size: 50px;"><b>乐在南大</b></h2>
+	    <p align="center"  style="font-family: '微软雅黑'; font-size: 25px;">你是否在好奇我们的课外活动……</p>
+        <br></br>
+	    <table align="center" cellpadding="10">
+		    <tr align="center">
+			    <td><img src="pic1.png" width="300" height="200" alt=""></td>
+			    <td><img src="pic2.png" width="300" height="200" alt=""></td>
+			    <td><img src="pic3.png" width="300" height="200" alt=""></td>
+			</tr>
+        <tr align="center">
+			<td colSpan=3 style="font-family: '微软雅黑'; font-size: 20px;">南大学子的校园生活可谓是丰富多彩。</td>
+		<tr>
+		<tr align="center">
+			<td colSpan=3 style="font-family: '微软雅黑'; font-size: 20px;">我们拥有100多个学生社团，在这里你可以结识到志同道合的伙伴，也可以学习最实用的技能。</td>
+		</tr>
+		<tr align="center">
+			<td colSpan=3 style="font-family: '微软雅黑'; font-size: 20px;">即使是无事可做,
+		</tr>
+		<tr align="center">
+			<td colSpan=3 style="font-family: '微软雅黑'; font-size: 20px;">来炜华运动场夜跑两圈，
+		<tr>
+		<tr align="center">
+			<td colSpan=3 style="font-family: '微软雅黑'; font-size: 20px;">来香雪海感受一下苏州园林的魅力,
+		</tr>
+		<tr align="center">
+			<td colSpan=3 style="font-family: '微软雅黑'; font-size: 20px;">即便只是饭后和友人沿着远东大道走上一圈也会有不一样的体验。
+		</tr>
+		</table>
+	</p>
+    <br></br><br></br>
+    <p>
+	    <h3 align="center" style="font-family: '微软雅黑'; font-size: 50px;"><b>爱在南大</b></h3>
+	    <p align="center"  style="font-family: '微软雅黑'; font-size: 25px;">你是否在好奇我们名声出圈的“神兽”……</p>
+    </p>
+    <br></br>
+    <p>
+		<table align="center">
+			<tr>
+				<td><img src="cat.jpg" width="300" height="200" alt="1"></td>
+				<td><img src="cat.png" width="300" height="200" alt="2"></td>
+			</tr>
+		</table>
+	</p>
+    <p align="center"><iframe src="schoollife-2.html" width="600" height="150" frameborder="0"></iframe><p>
+	<br></br><br></br><br></br><br></br>
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+<script type="text/javascript">
+	var index=0;
+	function ChangeImg(){
+		index++;
+		var a=document.getElementsByClassName("img-slide");
+		if(index>=a.length) index=0;
+		for(var i=0;i<a.length;i++){
+			a[i].style.display='none';
+		}
+		a[index].style.display='block';
+	}
+	setInterval(ChangeImg,2000);
+</script></body>
+</html>

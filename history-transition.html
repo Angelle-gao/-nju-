@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>history-transition</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+}
+
+/* 列容器 */
+.row1 {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image: url(images/背景24.png);
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+</head>
+<body>
+<header><nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+					    <li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+						        <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+<div class="background"></div>
+
+<div class="row1">
+  <div class="side">
+<div class="rownav">
+      <ul>
+  <li><a href="history.html">大学起源</a></li>
+  <li><a class="active" href="history-transition.html">春秋变迁</a></li>
+  <li><a href="history-now.html">建设情况</a></li>
+  <li><a href="history-teacher.html">师资力量</a></li>
+</ul></div>
+  </div>
+  <div class="main">
+     <ul><h2>愿为夸父，化作春秋与河山</h2></ul><br>
+	  <h2>&nbsp;&nbsp;&nbsp;&nbsp;南京大学历史上曾历经多次变迁，亦是中国第一所集教学和研究于一体的现代大学。中华民国政府撤离南京后，中华人民共和国成立前夕，由“国立中央大学”易名“国立南京大学”，翌年径称“南京大学”，沿用至今。</h2><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;自民国南京高师成立以来，南京大学经历过两次大的系科变迁，一次是北伐胜利国民政府成立之后实行大学区制，河海工科大学、江苏医科大学、江苏法政大学、上海商科大学等八所学校并入；一次是中华人民共和国成立后不久进行院系调整，主要并入金陵大学文理学院，同时南京大学分出除文理学院之外的大部分院系。在南高时期，除基本的文理科外，已开设农、工、商、教育等专修科；国立东南大学和国立中央大学时期，为全国学科最为齐备的大学；改革开放后，南京大学重新发展为拥有众多学科的综合大学。</p><br>
+      <div class="fakeimg" style="height:470px;"><img src="沿革图.gif" width="600" height="400"/></div>
+	  <p>留驻南京：</p>
+	  <p>1.文学院，理学院--南京大学</p>
+	  <p>2.工学院部分院系--南京工学院--东南大学</p>
+	  <p>3.工学院水利系--河海大学</p>
+	  <p>4.工学院化工系--南京化工学院--南京化工大学--南京工业大学</p>
+	  <p>5.师范学院--南京师范大学</p>
+	  <p>6.农学院--南京农业大学</p>
+	  <p>7.农学院林学系--南京林业大学</p>
+	  <p>8.气象工程系--南京气象学院--南京信息工程大学</p>
+	  <p>外迁：</p>
+	  <p>9.商学院--上海财经大学</p>
+	  <p>10.工学院航空系--华东航空学院--西北工业大学（西安）</p>
+	  <p>11.医学院--第五军医大学--第四军医大学</p>
+	  <p>12.工学院食品工程系--无锡轻工业学院--江南大学（无锡）</p>
+	  <p>13.工学院农业机械系--江苏工学院--江苏理工大学--江苏大学（镇江）</p>
+	  <p>14.法学院--华东政法学院（上海）</p>
+	  <p>15.中科院心理研究所</p>
+	  <p>16.影音部---中央电影学校---北京电影学院</p>
+	  <p>17.中央大学医学院－－上海医学院－－上海医科大学－－复旦大学医学院</p>
+	  <p>18.工学院电子工程系有线电部分－－成都电讯工程学院－－电子科技大学（成都）</p>
+	  <p>19.国立音乐学院－－中央音乐学院 </p>
+    <p></p>
+      <br>
+  </div>
+</div>
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+</body>
+</html>

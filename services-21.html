@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+/* 列容器 */
+.row1 {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image: url(images/背景32.png);
+	background-size: cover;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+</head>
+<body>
+<header><nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+						<li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+						        <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+<div class="background"></div>
+
+<div class="row1">
+  <div class="side">
+<div class="rownav">
+      <ul>
+  <li><a href="services-31.html">招生政策</a></li>
+  <li><a href="services-11.html">历年分数</a></li>
+  <li><a class="active" href="services-21.html">招生计划</a></li>
+</ul></div>
+  </div>
+  <div class="main">
+	 <br></br>
+     <table align="center" border=1 cellspacing="0" cellpadding="10" style="font-size: 15px">
+		<h2 align="center" style="font-style: '微软雅黑';font-size: 18px">2019年南京大学招生计划</h2>
+		<p><tr align="center" style="background: #DCC9E1">
+			<th>年份</th>
+			<th>省市</th>
+			<th>科类</th>
+			<th>类型</th>
+			<th>层次</th>
+			<th>计划数</th>
+	       </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>---</td>
+			<td>612</td>
+		   </tr>	 
+		</p>
+	</table>
+	<br></br>
+	<table align="center" border=1 cellspacing="0" cellpadding="10"  align="center" style="font-size: 15px">
+		<h3 align="center" style="font-style: '微软雅黑';font-size: 18px">2019年南京大学招生分专业招生计划</h2>
+		<p><tr style="background: #DCC9E1">
+			<th>年份</th>
+			<th>省市</th>
+			<th>科类</th>
+			<th>类型</th>
+			<th>专业</th>
+			<th>层次</th>
+			<th>计划数</th>
+	       </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>口腔医学</td>
+			<td>---</td>
+			<td>12</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>工科试验班</td>
+			<td>---</td>
+			<td>119</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>理科试验班（化学与生命科学类）</td>
+			<td>---</td>
+			<td>68</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>电子信息类</td>
+			<td>---</td>
+			<td>46</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>软件工程</td>
+			<td>---</td>
+			<td>72</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>理科试验班（数理科学类）</td>
+			<td>---</td>
+			<td>104</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>社会科学试验班</td>
+			<td>---</td>
+			<td>30</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>经济管理试验班</td>
+			<td>---</td>
+			<td>72</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>计算机科学与技术</td>
+			<td>---</td>
+			<td>45</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>人工智能</td>
+			<td>---</td>
+			<td>20</td>
+		   </tr>
+		   <tr align="center">
+			<td>2019</td>
+			<td>江苏</td>
+			<td>理工</td>
+			<td>统招</td>
+			<td>理科试验班（匡亚明学院大理科班）</td>
+			<td>---</td>
+			<td>24</td>
+		   </tr>
+		</p>
+	</table>
+	<br></br><br></br><br></br>
+  </div>
+</div>
+
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+</body>
+</html>

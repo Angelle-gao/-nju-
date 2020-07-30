@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+/* 列容器 */
+.row1 {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image: url(images/背景32.png);
+	background-size: cover;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+</head>
+<body>
+<header><nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+						<li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+						        <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+<div class="background"></div>
+
+<div class="row1">
+  <div class="side">
+<div class="rownav">
+      <ul>
+  <li><a href="org.html">学生组织</a></li>
+  <li><a href="us.html"  class="active">网页作者</a></li>
+  <li><a href="contact.html">网页反馈</a></li>
+</ul></div>
+  </div>
+  <div class="main">
+  <br></br>
+  <p style="font-size:25px">Hi,我们是这个网页的作者……</p>
+  <br>
+  <p align="center"><img src=us-1.jpg width=300></img></p>
+  <br><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我是来自南京大学2018级信息管理与信息系统的高雨婷，一只佛系宅喜欢猫猫的咸鱼猪猪女孩～我们可爱的小南NJU一直都是神秘而低调的形象，很多人想了解它真实的环境和在南哪儿的日常，所以我们开发出这个小小的网站帮助大家了解她！欢迎大家向我们反馈呀，笔芯笔芯~
+  </p></br>
+  <p align="center"><img src="us-2.png".jpg width=450></img></p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我是来自南京大学2018级信息管理与信息系统的龚辰皎，一名不愿意透露照片的普通学生。非常高兴能借助课程作业的机会制作这样一个可以为南哪儿宣传的小小网站。由于时间仓促，我们在现阶段只将其完善成为了如今的样子，它的不足之处我们会后续加以弥补。感谢您的浏览和反馈。
+  </p>
+  </br>
+  <br></br><br></br>
+  </div>
+</div>
+
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+</body>
+</html>

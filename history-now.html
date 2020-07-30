@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>history-now</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+}
+
+/* 列容器 */
+.row1 {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image: url( images/背景24.png);
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+</head>
+<body>
+<header><nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+						<li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+						        <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+<div class="background"></div>
+
+<div class="row1">
+  <div class="side">
+<div class="rownav">
+      <ul>
+  <li><a href="history.html">大学起源</a></li>
+  <li><a href="history-transition.html">春秋变迁</a></li>
+  <li><a class="active" href="history-now.html">建设情况</a></li>
+  <li><a href="history-teacher.html">师资力量</a></li>
+</ul></div>
+  </div>
+  <div class="main">
+     <ul><h2>迢迢南雍水，巍巍南大园</h2></ul><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;南京大学是研究型综合大学，格物致知，广博易良，向有学科齐备的传统，涵盖了众多领域。现有文学、历史、地理与海洋、地球、大气、天文空间、环境、哲学、数学、物理、化学化工、生、医、政、法、商、社会、信息管理、新闻传播、外国语、工程管理、建筑与规划、电子、计算机、工程与应用科学（含材料、能源、生物医学、量子电子学与光学工程系）等二十多个独立的学科类学院（学系）。校园主要有座落在南京市中心的鼓楼校区和位于南京东北部栖霞区的仙林校区，其中仙林校区为本科生主校区，并在逐步成为南大主校区。</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;南京大学现为中华人民共和国教育部直属重点大学，属“211工程”、“985工程”高校，为基础学科拔尖学生培养试验计划、九校联盟成员。南大现有1个国家实验室（筹），7个国家重点实验室，15个部、省重点实验室，21个国家和部、省工程中心，人文社会科学方面有27个各类重点研究基地，此外全校还设有200多个研究机构。医学院有附属鼓楼医院、金陵医院（南京总医院）、南京市口腔医院。除大学外，还有南大附属中学、丁家桥小学等。另有科技产业园区和多个产学研结合机构。南京大学有超过二十位诺贝尔奖得者作为荣誉教授。 依据评估全球大学的自然科学研究成果的主要指标“自然指数排行榜”(Nature Index 2017 Tables)，南京大学的排名为全国第二（仅次于北京大学）、全亚太地区第三、全球第十二，超越加州理工学院、康奈尔大学、新加坡国立大学、南洋理工大学、帝国理工学院等校。南京大学中文系的排名保持在全国前两名，与北京大学并列第一或仅次于北京大学。除此，南京大学中文系为培养全国第一位中文博士莫砺锋教授的大学。在2018 QS世界大学排名中，南京大学位列世界第114位。在校友会2020中国大学排名中位列第5位。</p>
+      <br>
+	  <div class="latest-work">
+	<div class="container"><div class="row">
+      <div class="col-1-2">
+				<a href="history.html">
+					<div class="img-wrapper">
+						<img src="library.jpg" alt="work-img" height="264">
+						<div class="img-hover">
+							<div class="caption-box">
+								<i class="ion-ios-eye-outline"></i>
+								<p class="caption-text">仙林“大活”</p>
+							</div>
+						</div>
+					</div>
+				</a>
+		  </div>
+		<div class="col-1-2">
+				<a href="history.html">
+					<div class="img-wrapper">
+						<img src="pic3.png" alt="work-img" height="264">
+						<div class="img-hover">
+							<div class="caption-box">
+								<i class="ion-ios-eye-outline"></i>
+								<p class="caption-text">星云楼（南大会议中心）</p>
+							</div>
+						</div>
+					</div>
+				</a>
+		  </div></div></div></div>
+	  <ul><h2>学科建设</h2></ul><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;南京大学最早在中国开展博士学位教育，设立了中国第一个大理科通才教育班、第一个大文科通才教育班。创建了中国第一个生物系、第一个气象系、第一个心理学系、第一个西洋文学系、第一个建筑系、第一个航空系、第一个体育科、第一个艺术科、第一个电影播音专修科、第一个农科、第一个林科、第一个现代地学系、第一个现代数学系、第一个国立大学医学院和新中国第一个综合性大学医学院、第一个履践型政治行政系、第一个履践型法学院、中国第一个商学院以及第一个工商管理、金融理财、会计、国际贸易系等等。其他许多学科，如文、史、哲、戏剧学、宗教学、人类学、社会学、化学、物理学、天文学、电子学、计算机科学、城市规划等等，都有深厚传统。</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;截止2019年3月，南京大学拥有专业硕士学位授权点25个，专业博士学位授权点1个，硕士学位授权一级学科8个，硕士学位授权二级学科点（不含一级学科覆盖点）6个，博士学位授权一级学科38个，博士学位授权二级学科点（不含一级学科覆盖点）3个，博士后流动站38个，国家级人才培养基地13个；有一级学科国家重点学科8个，二级学科国家重点学科13个，江苏高校优势学科建设工程三期项目立项学科19个。</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;2017年12月28日全国第四轮学科评估结果公布，南京大学3个学科获得A+，11个学科获得A，7个学科获得A-，A类学科总数在全国高校中名列第六，A+学科总数排名第十七位。</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;世界一流学科建设学科（15个）：哲学、中国语言文学、外国语言文学、物理学、化学、天文学、大气科学、地质学、生物学、材料科学与工程、计算机科学与技术、化学工程与技术、矿业工程、环境科学与工程、图书情报与档案管理</p><br><br>
+  </div>
+</div>
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+</body>
+</html>

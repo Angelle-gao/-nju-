@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>application3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+/* 列容器 */
+.row1 {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image: url(images/背景32.png);
+	background-size: cover;
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+</head>
+<body>
+<header><nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+						<li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+						        <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+<div class="background"></div>
+
+<div class="row1">
+  <div class="side">
+<div class="rownav">
+      <ul>
+  <li><a class="active" href="services-31">招生政策</a></li>
+  <li><a href="services-11.html">历年分数</a></li>
+  <li><a href="services-21.html">招生计划</a></li>
+</ul></div>
+  </div>
+  <div class="main">
+	  <br></br>
+	  <h2 align="center" style="font-style: '微软雅黑';font-size: 25px">南京大学2019年普通本科招生章程</h2>
+	  <br></br>
+	  <p align="center" style="font-style: '微软雅黑';font-size: 15px">供稿单位：南京大学招生办</p>
+	  <br></br>
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南京大学（Nanjing University）是直属于教育部的全国重点综合性、研究型大学，也是国家“双一流”A类建设高校。学校向达到毕业及学位授予条件的本科生颁发南京大学本科学历证书和学士学位证书。</p>
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;办学类型：国家公办全日制普通高等学校。
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;仙林校区地址：江苏省南京市仙林大道163号。
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鼓楼校区地址：江苏省南京市汉口路22号。
+	  <br></br>
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一章  总则
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第一条 为保证我校本科招生工作的顺利进行，维护考生合法权益，根据《中华人民共和国教育法》《中华人民共和国高等教育法》等相关法律，教育部有关规定和《南京大学章程》，结合学校本科招生工作的实际情况，制定本章程。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二条 我校本科招生工作实施“阳光工程”，坚持“公平公正、全面衡量、综合评价、择优录取”的原则，选拔和录取适合我校人才培养特点的优秀学生。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三条 我校本科招生工作接受纪检监察部门、考生、家长、新闻媒体，以及社会各界的监督。
+	  <br></br>
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二章 组织机构
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四条 学校设立本科招生工作委员会，作为学校本科招生工作的决策和管理机构，确定本科招生工作的总体思路和目标，审议本科招生政策、计划和录取原则，讨论决定本科招生重大事宜，为本科招生工作提供指导意见。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五条 学校设立本科招生工作领导小组，根据本科招生工作委员会的授权负责制定招生章程、编制招生计划、决定选拔方案、确定录取标准、审核录取结果等本科招生具体事项。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第六条 本科招生办公室（以下简称本科招办）是学校组织和实施本科招生工作的常设机构，具体负责普通本科招生的日常工作。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第七条 本科招办根据需要组建赴各省（自治区、直辖市）招生工作组。各招生工作组负责该地区招生宣传和招生政策、录取情况的咨询，并协助本科招办进行所负责地区的本科招生录取工作。招生工作组组长由学校发文聘任。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第八条 学校纪检监察部门负责监督本科招生各项政策和规定的实施。
+	  <br></br>
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三章 招生计划
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第九条 根据我校建设一流本科教育、构建高水平创新人才培养体系（“三三制”2.0）的整体思路，2019年我校继续实行按专业和学科大类（以下统称“专业”）相结合的招生模式，计划面向全国招收全日制普通本科生3300人。招生专业和分流方向详见我校公布的《2019年南京大学本科招生专业（类）目录》
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十条 根据国家和教育部相关文件精神，结合学校人才培养目标、办学条件等实际情况，我校统筹考虑各省（自治区、直辖市）考生人数、生源质量、区域协调发展，以及历年计划延续性等因素，分省确定招生计划，报教育部审批后由各省级招生主管部门向社会公布。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十一条 根据教育部相关文件精神，我校按学校年度本科招生计划总数的1%制定预留计划，用于调节各地统考上线生源的不平衡。
+	  <br></br>
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四章 录取规则
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十二条 我校本科招生录取工作遵循教育部规定的“学校负责、招办监督”的录取体制，在教育部领导下，由各省（自治区、直辖市）招生主管部门统一组织进行。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十三条 我校按照文史类、理工类和艺术类分类录取考生。实行高考综合改革省份录取时按照当地招生主管部门政策执行。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十四条 我校本科招生实行计算机远程网上录取，根据各省（自治区、直辖市）考生报考情况确定调档比例或调档分数。按照平行志愿投档的批次，调档比例原则上不超过105%。按照顺序志愿投档的批次，调档比例原则上不超过120%。在内蒙古自治区按分数优先原则（分数清）进行录取。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十五条 我校在同批次录取控制分数线上生源不足的情况下，可接收非第一院校志愿考生或公开征集志愿，但调档人数（包括征集志愿）不超过我校在该批次剩余计划数，且只能录取在尚有空额的专业。若生源仍不足，我校将剩余的招生计划调配至生源充足的省份。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十六条 我校调档时只认可教育部规定的全国性政策加分；同一考生如有多项政策加分，只取其中最高一项分值，且加分不得超过20分。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十七条 我校对进档考生按分数优先的原则，依据高考实际成绩（不含政策加分）进行专业录取，不设专业级差。实际成绩相同时，按所在省（自治区、直辖市）招生主管部门提供的投档位次录取。未提供投档位次的，文史类考生依次比较语文、英语、数学成绩，理工类、综合改革类考生依次比较数学、语文、英语成绩。实行高考综合改革省份的考生需满足填报专业选考科目要求。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十八条 我校保送生、自主招生、综合评价、高水平艺术团、高水平运动队、艺术类专业等录取办法依据教育部、所在省（自治区、直辖市）招生主管部门规定和我校本年度相关类别招生简章执行。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我校面向农村及贫困地区的国家专项计划和励学计划、民族班、内地新疆高中班、内地西藏班、华侨和港澳台地区学生的录取按照教育部相关规定及我校有关招生办法执行。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第十九条  我校各专业的录取不规定男女生比例，不限制外语语种。入学后除外国语言文学类专业另行规定外，其他专业学生均须通过教学计划规定的英语课程和学位英语考试。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十条 除第十八条中安排在提前批录取的特殊类型外，我校提前批录取考生入学后只能参加录取专业相关院系组织的实验班选拔。其中录取至大类的，第一学年专业分流时限定在大类内确认主修专业，第二学年结束后可按相关规定调整主修专业；录取至专业的，第二学年结束后可按相关规定调整录取专业。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十一条 我校对于江苏省考生还执行以下规定：报考第一批的考生高中学业水平测试两门选测科目等级最低要求为AA，若考生两门选测科目等级均达到A+则加3分进行专业录取。报考提前批的考生高中学业水平测试两门选测科目等级最低要求为历史或物理A，另一门B。自主招生、励学计划、综合评价、高水平艺术团、高水平运动队、艺术类专业资格考生两门选测科目等级最低要求依据我校本年度相关类别招生简章执行。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十二条 我校对于高考综合改革试点省份学生综合素质档案材料的使用办法为：在特殊类型招生中，综合素质档案材料将作为报名资格审核的参考；在普通高考录取中，综合素质档案材料将作为调剂考生专业志愿的参考。
+	  <br></br>
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第五章 收费标准及奖助学措施
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十三条 我校按照国家和江苏省相关规定，实现学分制收费。新生在入校时按专业收费标准预收学费，分流后按照准入专业所对应的学分制学费标准收费，并对预收学费按学年进行结算。住宿费标准为人民币1200元/年。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十四条 我校承诺不让任何一个学生因为家庭经济困难而辍学，积极通过奖学金、助学金、国家助学贷款、勤工助学、临时困难补助、学杂费减免、家庭经济困难学生入学绿色通道等方式帮助学生完成学业。被我校录取的国家贫困专项等新生中家庭经济困难的，入学前即可申请5000元专项助学金。
+      <br></br>
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第六章 附则
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十五条 我校对考生的身体健康状况要求执行教育部、卫生部、中国残疾人联合会制定的《普通高等学校招生体检工作指导意见》规定。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十六条 新生入校后，我校将按照国家招生政策规定和学籍管理规定开展新生入学资格复查及身体复检。对特殊类型招生录取的新生，组织专家组开展入学专业复测和复核。凡经查实为替考、违规录取、冒名顶替入学等违规情况的考生，一律取消其入学资格、不予学籍电子注册，并报告有关部门追责。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十七条 根据“阳光工程”要求，我校今年本科招生工作将进一步推进制度化、系统化建设，加强面向考生的宣传服务及信息公开工作，切实维护广大考生的合法权益。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十八条 我校有关招生计划、招生政策、收费标准、录取原则和录取结果均可在南京大学本科招生网上查询，学校不会对外委托任何单位和个人对相关招生政策、录取情况进行发布和解释。
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二十九条 本章程由南京大学普通本科招生办公室负责解释。
+	  <br></br><br></br>
+	  <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;附：咨询及联系方式
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;咨询电话：400-1859680
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传真电话：025-89686606
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;监督邮箱：qingfengnanda@nju.edu.cn
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;招生主页：http://bkzs.nju.edu.cn
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子邮箱：bkzs@nju.edu.cn
+      <p style="font-size=14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;官方微信：南大招生小蓝鲸（ndzsxlj）
+	  <br></br><br></br><br></br>
+  </div>
+</div>
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+</body>
+</html>

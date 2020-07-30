@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hostory-teacher</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/app.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* body 样式 */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* 标题 */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* 标题字体加大 */
+.header h1 {
+    font-size: 40px;
+}
+
+/* 列容器 */
+.row1 {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* 创建两个列 */
+/* 边栏 */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-image:url(images/背景24.png);
+    padding: 20px;
+}
+
+/* 主要的内容区域 */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* 测试图片 */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 底部 */
+.footer {
+    padding: 30px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 700px 时, 让两栏上下堆叠显示 */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
+}
+
+/* 响应式布局 - 在屏幕设备宽度尺寸小于 400px 时, 让导航栏目上下堆叠显示 */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+nav .level>li{float: left;width:20%;text-align: center;background: #562960;padding: 20px;font-size: 16#6D3474x;transition: .4s;}
+nav .level>li a{
+	color: white;
+	font-family: "微软雅黑";
+	font-style: normal;
+	text-decoration: none;
+}
+nav .level>li a.active1 {
+    background-color:#C2A7CC;
+}
+
+nav.level>li a not(.active1) {
+    background-color:#562960;
+}
+nav .level>li:hover{background: #F3EEEE;text-decoration: none;color: #000000}   /* 设置鼠标滑过后的样式 */
+nav .two{display: none;margin-top:0;}  /* 先使二级菜单的内容隐藏 */
+nav .level>li:hover .two{display: block;text-decoration: none;font-family: "微软雅黑"}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+nav .two li{padding: 0;transition: .4s;cursor: pointer;}
+nav .two li:hover{background: #DBC0E3;}
+.rownav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.rownav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.rownav li a.active {
+    background-color:#C2A7CC;
+    color: white;
+}
+
+.rownav li a:hover:not(.active) {
+    background-color:#896891;
+    color: white;
+}
+</style>
+</head>
+<body>
+<header><nav class="main-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-1-4">
+				  <h1 class="logo" style="font-family: '方正字迹-逸龙行楷 简'; font-weight: bolder; font-size: 36px;">www.MYNJU.com </h1>
+				</div>
+			  <span>
+          <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." align="baseline"/>
+          <input name="b" type="image" class="button" src="images/search.png" width="20" height="20" value="button"/>
+          </span>
+				<div class="col-3-4">
+					<ul id="menu" class="main-menu">
+						<li><a href="南大概述.html">南大概览</a></li>
+						<li><a href="history.html">历史溯源</a>
+						    <ul class="two">
+								<li><a href="history.html">大学起源</a></li>
+								<li><a href="history-transition.html">春秋变迁</a></li>
+								<li><a href="history-now.html">建设情况</a></li>
+								<li><a href="history-teacher.html">师资力量</a></li>
+							</ul></li>
+						<li><a href="schoollife.html">校园生活</a></li>
+						<li><a href="services-31.html">招生讯息</a>
+					<ul class="two">
+							    <li><a href="services-31.html">招生政策</a></li>
+								<li><a href="services-11.html">历年分数</a></li>
+								<li><a href="services-21.html">招生计划</a></li>
+                    </ul></li>
+						<li><a href="contact.html">联系我们</a>
+							<ul class="two">
+								<li><a href="org.html">学生组织</a></li>
+								<li><a href="us.html">网页作者</a></li>
+								<li><a href="contact.html">网页反馈</a></li>
+                    </ul></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav></header>
+<div class="background"></div>
+
+<div class="row1">
+  <div class="side">
+<div class="rownav">
+      <ul>
+  <li><a href="history.html">大学起源</a></li>
+  <li><a href="history-transition.html">春秋变迁</a></li>
+  <li><a href="history-now.html">建设情况</a></li>
+  <li><a class="active" href="history-teacher.html">师资力量</a></li>
+</ul></div>
+  </div>
+  <div class="main">
+      <ul><h2>德流深远，下自成蹊</h2></ul><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;南京大学师资和研究人员、教职员工由不同职类的人员构成。根据官方消息，2007/2008学年初，全校教职工总计4549人，其中专任教师2080人。2011年，全校共有教职员工4600余人，其中专任教师2135人。2013年，全校有专任教师2251人。</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;南京大学拥有一支高素质的师资队伍，其中包括中国科学院院士28人，中国工程院院士4人，中国科学院外籍院士1人，在国际或他国当选院士13人次（含第三世界科学院院士4人，发展中国家科学院院士1人，俄罗斯科学院院士1人，加拿大皇家科学院院士1人，欧洲文理科学院院士1人，欧洲科学院外籍院士2人，国际量子分子科学院院士1人，俄罗斯艺术科学院荣誉院士1人，法兰西艺术院通讯院士1人），教育部“长江学者奖励计划”特聘教授100人、“青年长江学者”14人，国家杰出青年基金获得133人、优秀青年科学基金项目获得者91人，国家科技重大专项、“973计划”、“863计划”、国家重点研发计划等重大项目首席科学家98人次，国务院学位委员会学科评议组成员22人，“万人计划”科技创新领军人才22人、哲学社会科学领军人才6人、百千万工程领军人才2人、教学名师4人、青年拔尖人才21人，国家级教学名师11人，教育部“百千万人才工程”国家级人选34人，“青年海外高层次人才计划”入选者108人。</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;中国科学院院士：沈树忠、郭子建、许志琴、陈颙、邹志刚、都有为、吕建、吴培亨、郑有炓、陈骏、伍荣生、王德滋、陈懿、陈洪渊、孙义燧、方成、苏定强、张淑仪、薛禹群、祝世宁、符淙斌、王颖、曲钦岳、冯端、程镕时、王广厚、邢定钰、龚昌德</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;中国工程院院士：任洪强、张全兴、刘志红、黎介寿</p><br>
+	  <p>&nbsp;&nbsp;&nbsp;&nbsp;中国科学院外籍院士：阿龙·切哈诺沃（Aaron Ciechanover）</p>
+      <br>
+	  <div class="latest-work">
+	<div class="container"><div class="row">
+      <div class="col-1-2">
+				<a href="history.html">
+					<div class="img-wrapper">
+						<img src="周志华.jpg" alt="work-img" height="250">
+						<div class="img-hover">
+							<div class="caption-box">
+								<i class="ion-ios-eye-outline"></i>
+								<p class="caption-text">AI周志华教授招生宣讲</p>
+						  </div>
+					  </div>
+				</div>
+				</a>
+		  </div>
+		<div class="col-1-2">
+				<a href="history.html">
+					<div class="img-wrapper">
+						<img src="教授.jpg" alt="work-img" height="250">
+						<div class="img-hover">
+							<div class="caption-box">
+								<i class="ion-ios-eye-outline"></i>
+								<p class="caption-text">沈树忠院士</p>
+						  </div>
+					  </div>
+				</div>
+				</a>
+		  </div></div></div></div>
+</div></div>
+
+<div class="footer">
+  <br><p><img src="njulogo.png"/></p><br>
+  <p><a href="https://www.nju.edu.cn/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">南京大学官网</a>
+	        <a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_cms/" style="color: #000000; font-family: '微软雅黑'; font-size: 18px; text-decoration: none; font-weight: 500;">&nbsp;&nbsp;&nbsp;&nbsp;南京大学本科招生信息网</a>
+            <a href="#" style="color:#6F5A88;font-family: '微软雅黑'; font-size: 18px;text-decoration: none;"> <span style="font-weight: 500">&nbsp;&nbsp;&nbsp;&nbsp;南京大学微信公众号</span></a></p>
+</div>
+
+</body>
+</html>
